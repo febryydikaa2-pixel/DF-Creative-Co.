@@ -38,32 +38,9 @@ items.forEach(item => {
 });
 
 
-
-  if (window.innerWidth <= 1024) {
-    document.body.innerHTML = `
-      <div style="
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        height:100vh;
-        background:black;
-        color:white;
-        flex-direction:column;
-      ">
-        <h1>Desktop Only</h1>
-        <p>Buka di laptop/PC</p>
-      </div>
-    `;
-  }
-}
-
-
-
 const toggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("nav-menu");
 
-if (toggle && nav) {
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-}
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});

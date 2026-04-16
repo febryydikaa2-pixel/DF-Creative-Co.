@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  max-width: 100%;
 }
 
 
@@ -12,6 +13,9 @@ body {
   /* background-color: rgb(0, 0, 0); */
    background: url('img/Screenshot 2026-04-11 172914.png') center/cover no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
 }
 
 body::before {
@@ -22,14 +26,31 @@ body::before {
   z-index: -1;
 }
 
-
-/* HP */
 @media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    padding:20px;
   }
 
-/* Tablet */
-@media (max-width: 1024px) {
+  .left{
+    max-width: 100%;
   }
+
+  .left h1 {
+    font-size: 40px;
+    margin-top: 100px;
+  }
+
+  .right{
+    max-width: 100%;
+  }
+
+  .right p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
 
 .logo {
   color: rgb(255, 0, 0);
@@ -104,8 +125,9 @@ body::before {
 /* background biar kelihatan efek blur */
 /* HERO */
 .hero {
+  width: 100%;
   position: relative;
-  height: 130vh;
+  height: auto;
   background: none;
   color: white;
   line-height: 0.9;
@@ -139,9 +161,10 @@ body::before {
 
 /* container */
 .hero-content {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   z-index: 2;
-  display: flex;
   justify-content: space-between;
   padding: 80px;
 }
@@ -204,12 +227,14 @@ body::before {
 /* marque */
 
 marquee{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
     display: flex;
     font-family: Arial, sans-serif;
     background-color: rgb(230, 0, 0);
     color: bisque;
     height: 50px;
-    width: 100%;
     font-size: 17PX;
     font-weight: bold;
     text-align: center;
@@ -220,6 +245,7 @@ marquee{
 /* about */
 
 #about-unique {
+  width: 100%;
   background: black;
   color: white;
   padding: 150px 10%;
@@ -339,6 +365,7 @@ marquee{
 /* work */
 
 #work {
+  width: 100%;
   padding: 120px 10%;
   background: black;
   color: white;
@@ -414,7 +441,8 @@ marquee{
 /* skills */
 
 .skills {
-  height: 150vh;
+  width: 100% ;
+  height: 100%;
   background: black;
   padding: 100px 10%;
   text-align: center;
@@ -515,7 +543,7 @@ marquee{
 
 .herobgt {
   position: relative;
-  height: 200vh; /* tambah ruang scroll */
+  height: 100%; /* tambah ruang scroll */
   margin-top: 150px;
   position: relative;
 }
@@ -768,6 +796,7 @@ marquee{
 /* FOOTER */
 /* FOOTER */
 .footer-min {
+  width: 100%;
   background: transparent; 
   color: white;
   padding: 10px 50px;
@@ -822,7 +851,6 @@ marquee{
   transition: 0.3s;
 }
 
-
 /* HAMBURGER */
 .menu-toggle {
   display: none;
@@ -833,6 +861,7 @@ marquee{
 
 /* MOBILE */
 @media (max-width: 768px) {
+
   .menu-toggle {
     display: block;
   }
@@ -843,41 +872,26 @@ marquee{
     right: 0;
     width: 100%;
     background: black;
+    display: flex;
     flex-direction: column;
     align-items: center;
+
     max-height: 0;
     overflow: hidden;
     transition: 0.3s;
+  }
+
+  .nav-right a {
+    margin: 15px 0;
+    font-size: 18px;
   }
 
   .nav-right.active {
     max-height: 300px;
   }
 
+  /* sembunyikan text kiri biar ga sempit */
   .nav-left {
     display: none;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .left h1 {
-    font-size: 40px;
-    margin-top: 100px;
-  }
-
-  .right {
-    max-width: 100%;
-  }
-
-  .right p {
-    font-size: 16px;
-    margin-top: 20px;
-  }
-
-  .hero {
-    height: auto;
   }
 }
