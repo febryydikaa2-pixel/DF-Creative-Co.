@@ -3,10 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-}
-
-html, body {
-  overflow-x: hidden;
+  max-width: 100%;
 }
 
 
@@ -33,6 +30,10 @@ body::before {
   .hero-content {
     flex-direction: column;
     padding:20px;
+  }
+
+  .left{
+    max-width: 100%;
   }
 
   .left h1 {
@@ -159,9 +160,10 @@ body::before {
 
 /* container */
 .hero-content {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   z-index: 2;
-  display: flex;
   justify-content: space-between;
   padding: 80px;
 }
@@ -227,17 +229,16 @@ marquee{
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    /* display: flex;
+    display: flex;
     font-family: Arial, sans-serif;
     background-color: rgb(230, 0, 0);
     color: bisque;
     height: 50px;
-    width: 100%;
     font-size: 17PX;
     font-weight: bold;
     text-align: center;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
  
 /* about */
