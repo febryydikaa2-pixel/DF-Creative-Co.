@@ -26,7 +26,7 @@
   </div>
 
   <nav class="nav-right" id="nav-menu">
-    <a href="#work">works</a>
+    <a href="#work">work</a>
     <a href="#about-unique">about</a>
     <a href="#footer-links">contact</a>
   </nav>
@@ -52,10 +52,8 @@
     <!-- kanan -->
     <div class="right">
       <p>
-        I AM A DEVELOPER AND UX/UI DESIGNER BASED IN ITALY.
-        I HAVE MANY YEARS OF EXPERIENCE IN CONSULTING IN ALL AREAS OF DIGITAL.
-        I LOVE MINIMAL AND BRUTALIST DESIGN.
-        I LOVE NATURE, PIZZA AND ART.
+     SAYA DIKA FEBRY AULIANSYAH, SEORANG UI/UX DESIGNER DAN FRONTEND DEVELOPER YANG BERFOKUS PADA PEMBUATAN TAMPILAN DIGITAL YANG BERSIH DAN FUNGSIONAL.
+
       </p>
 
       <a href="#footer-links" class="btn">CONTACT ME</a>
@@ -65,7 +63,7 @@
 </section>
 <!-- marque -->
  <marquee behavior="scroll" direction="left" scrollamount="5" class="track">
-  <span> TEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTITEXT BERJALAN TANPA HENTI</span>
+  <span>FROM DESIGN TO CODE • PIXEL TO PRODUCT • UI/UX TO REAL INTERFACE • IDEA TO EXECUTIONFROM DESIGN TO CODE • PIXEL TO PRODUCT • UI/UX TO REAL INTERFACE • IDEA TO EXECUTIONFROM DESIGN TO CODE • PIXEL TO PRODUCT • UI/UX TO REAL INTERFACE • IDEA TO EXECUTION</span>
 </marquee>
 
 <!-- about -->
@@ -76,16 +74,28 @@
 
     <!-- TEXT (STICKY) -->
     <div class="about-sticky">
-      <h2>
-        I DON'T JUST DESIGN, <br>
-        I CREATE EXPERIENCE
-      </h2>
+  <h2>HALLO, SAYA DIKA FEBRY</h2>
 
-      <p>
-        Fokus saya adalah membuat tampilan yang sederhana, kuat,
-        dan mudah digunakan dalam berbagai konteks digital.
-      </p>
-    </div>
+  <p>
+    SAYA MENGGUNAKAN KEMAMPUAN DAN RASA INGIN TAHU SAYA UNTUK MEMBANGUN TAMPILAN DIGITAL DAN PENGALAMAN WEB.
+  </p>
+
+  <p>
+    SEBAGAI LULUSAN SMK MAHAPUTRA JURUSAN PPLG, SAYA BERFOKUS PADA UI/UX DESIGN DAN FRONTEND WEB DEVELOPMENT.
+  </p>
+
+  <p>
+    SAYA MENGEMBANGKAN INTERFACE YANG RESPONSIF DAN INTERAKTIF MENGGUNAKAN HTML, CSS, DAN JAVASCRIPT, DENGAN PENEKANAN PADA KEJELASAN, FUNGSIONALITAS, DAN KEMUDAHAN PENGGUNAAN.
+  </p>
+
+  <p>
+    SAYA TERUS MENGEMBANGKAN KEMAMPUAN MELALUI BERBAGAI PROYEK DAN EKSPLORASI, MEMAHAMI BAGAIMANA DESAIN DAN KODE BEKERJA BERSAMA DALAM MEMBANGUN PRODUK DIGITAL.
+  </p>
+
+  <p>
+    PENGALAMAN SAYA BEKERJA DI LINGKUNGAN PRODUKSI MEMBENTUK CARA KERJA YANG LEBIH TERSTRUKTUR, TELITI, DAN TERBIASA MENYELESAIKAN PEKERJAAN SESUAI TARGET.
+  </p>
+</div>
 
     <!-- IMAGE SCROLL -->
 <div class="about-image">
@@ -102,8 +112,8 @@
 <section id="work">
 
   <div class="work-header">
-    <h2 class="bg-text">WORK</h2>
-    <p class="fg-text">My Selected Work</p>
+    <h2 class="bg-text">PROYEK</h2>
+    <p class="fg-text">Proyek sekolah</p>
   </div>
 
   <div class="work-list">
@@ -135,7 +145,7 @@
 <section class="skills">
   <div class="skills-header">
   <h2 class="bg-text">SKILLS</h2>
-  <p class="fg-text">My Work Skills</p>
+  <p class="fg-text">Skills saya</p>
 </div>
   <div class="skill-container">
   <div class="skill-item">HTML</div>
@@ -176,7 +186,6 @@
   <span>UX/UI DESIGN</span>
   <span>FRONTEND DEVELOPMENT</span>
   <span>WEBFLOW DEVELOPMENT</span>
-  <span>DIGITAL CONSULTANT</span>
   <span>WORDPRESS DEVELOPMENT</span>
   <span>NEW BUSINESSES</span>
   <span>STARTUPS</span>
@@ -220,8 +229,6 @@
     <!-- LEFT (IDENTITAS + CTA) -->
     <div class="footer-left">
       <p class="footer-name">DIKA FEBRY</p>
-      <p class="footer-role">Frontend Developer</p>
-      <p class="footer-cta">Available for work</p>
     </div>
 
     <!-- CENTER (CONTACT) -->
@@ -243,7 +250,31 @@
 
 </footer>
 
+  <script>
+    function checkDevice() {
+      if (window.innerWidth < 1024) {
+        document.body.innerHTML = `
+          <div style="
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            text-align:center;
+            font-family:sans-serif;
+            padding:20px;
+          ">
+            <div>
+              <h2>AKSES DARI DESKTOP SAJA</h2>
+              <p>Website ini dirancang khusus untuk tampilan desktop.</p>
+            </div>
+          </div>
+        `;
+      }
+    }
 
-  
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
